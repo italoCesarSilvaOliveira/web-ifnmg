@@ -9,7 +9,11 @@ body * {
 }
 
 body {
-  background: linear-gradient(to right, #e4e5e6, #00416a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to right,
+    #e4e5e6,
+    #00416a
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 main {
@@ -24,14 +28,14 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #E4E5E6;
+  color: #e4e5e6;
 }
 
 .cabecalho .menu ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #E4E5E6;
+  background-color: #e4e5e6;
   list-style: none;
   margin: 20px 30%;
   padding: 5px;
@@ -43,14 +47,13 @@ main {
 .cabecalho .menu ul li a {
   text-decoration: none;
   color: #0f0c29;
-
 }
 
 .principal {
   margin: 80px 25%;
   padding: 2%;
   background: linear-gradient(to right, #232526, #414345);
-  color: #E4E5E6;
+  color: #e4e5e6;
   border-radius: 10px;
   border-bottom: 4px solid #019eff;
 }
@@ -60,7 +63,7 @@ main {
   justify-content: center;
   margin-bottom: 20px;
   font-weight: 700;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .principal p {
@@ -87,5 +90,79 @@ img {
   justify-content: center;
   gap: 40px;
   margin-top: 70px;
+}
 
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  height: 70vh;
+}
+
+form fieldset {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 43vh;
+  height: 63vh;
+  align-items: center;
+}
+
+form fieldset .inputBox {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  padding: 0 30px;
+}
+
+form fieldset .inputBox .inputUser {
+  outline: unset; /* Para retirar as bordas mais fortes quando passa o mause*/
+  padding: 20px;
+  width: 300px;
+  border: 1px solid #203a43;
+  border-radius: 10px;
+}
+
+form fieldset legend {
+  margin-left: 15%;
+}
+
+form fieldset legend strong {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  color: #0f2027;
+  margin: 0 10px;
+}
+
+form fieldset input[type="submit"] {
+  position: absolute;
+  bottom: 0;
+  border-radius: 20px;
+  border: 0;
+  padding: 20px 100px;
+  background-color: #6b6b83;
+  margin: 0 50px;
+  margin-bottom: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+form table {
+  display: flex;
+  flex-direction: column;
+  border-collapse: collapse;
+}
+
+form table tr th {
+  border: 2px solid #0f0c29;
+  background-color: #232526;
+  color: #E9E4F0;
+  padding: 15px;
+}
+
+form table tr td {
+  border: 2px solid #0f0c29;
+  padding: 15px;
 }

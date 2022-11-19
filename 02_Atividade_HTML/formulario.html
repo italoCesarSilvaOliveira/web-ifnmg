@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/pastinha.ico" type="image" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Formulario</title>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <h1>Formulário</h1>
+      <div class="menu">
+        <ul>
+          <li><a href="index.html">Principal</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="formulario.html">Formularios</a></li>
+        </ul>
+      </div>
+    </header>
+    <div>
+      <form>
+        <fieldset>
+          <legend><strong> Cadastro </strong></legend>
+          <br />
+          <div class="inputBox">
+            <label for="nome">Nome Completo</label>
+            <input
+              type="text"
+              name="nome"
+              id="nome"
+              class="inputUser"
+              placeholder="Digite seu nome"
+              requerid
+            />
+          </div>
+          <br />
+          <div class="inputBox">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="inputUser"
+              placeholder="Digite seu email"
+              requerid
+            />
+          </div>
+          <br />
+          <div class="inputBox">
+            <label for="telefone">Telefone</label>
+            <input
+              type="tel"
+              name="telefone"
+              id="telefone"
+              class="inputUser"
+              placeholder="Digite seu telefone"
+              requerid
+            />
+          </div>
+          <br />
+          <div class="inputBox">
+            <label for="data_nascimento"
+              ><strong> Data de Nascimento</strong></label
+            >
+            <input
+              type="date"
+              name="data_nascimento"
+              class="inputUser"
+              id="data_nascimento"
+              class="inputUser"
+              requerid
+            />
+          </div>
+          <br />
+          <input type="submit" name="submit" id="submit" />
+        </fieldset>
+        <fieldset>
+          <legend><strong> Login </strong></legend>
+          <br />
+          <div class="inputBox">
+            <label for="login">Email</label>
+            <input
+              type="text"
+              name="login"
+              id="login"
+              class="inputUser"
+              placeholder="Digite seu email"
+              requerid
+            />
+          </div>
+          <br />
+          <div class="inputBox">
+            <label for="senha">Senha</label>
+            <input
+              type="password"
+              name="senha"
+              id="senha"
+              class="inputUser"
+              placeholder="Digite sua senha"
+              requerid
+            />
+          </div>
+          <input type="submit" name="submit" id="submit" />
+        </fieldset>
+        <div class="table">
+        <table>
+          <h2> Cadastrados </h2>
+          <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Data de Nascimento</th>
+          </tr>
+          <tr>
+            <td>João Paulo</td>
+            <td>jp@exemplo.com</td>
+            <td>(11) 11111-1111</td>
+            <td> 01/01/0001</td>
+          </tr>
+          <tr>
+            <td>Arthur Porto</td>
+            <td>ap@exemplo.com</td>
+            <td>(22) 22222-2222</td>
+            <td>02/02/0002</td>
+          </tr>
+          <tr>
+            <td>Franck Alysson</td>
+            <td>fa@exemplo.com</td>
+            <td>(33) 33333-3333</td>
+            <td>03/03/0003</td>
+          </tr>
+          <tr>
+            <td>Carlos Eduardo</td>
+            <td>ce@exemplo.com</td>
+            <td>(44) 44444-4444</td>
+            <td>04/04/0004</td>
+          </tr>
+        </table>
+      </div>
+      </form>
+    </div>
+  </body>
+</html>
