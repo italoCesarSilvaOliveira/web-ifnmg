@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  
+  /* box-sizing: border-box; -> Significa que as larguras e alturas pre
+  definidas na página não serão mais consideradas, ou seja, todo elemento
+  que for colocado (exemplo: div) terá o seu tamanho e configurações originais*/
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+
+body {
+  /* overflow-x: hidden; -> Indica se é necessário ter barra de rolagem ou não.
+  Além disso, consegue definir o transbordo de ume elemento na página*/
+  overflow-x: hidden; 
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/wallpaper.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.main-width {
+  width: 1280px;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  padding: 40px 0 30px;
+  display: flex;
+
+  /* flex-wrap: nowrap; -> Todos os itens flexiveis estarão em uma linha */
+  flex-wrap: nowrap; 
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo i {
+  color: #ceb09c;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+nav .hamb {
+  background-color: white;
+  width: 35px;
+  height: 24px;
+  position: absolute;
+  right: 3%;
+  top: 60px;
+  z-index: 5;
+  cursor: pointer;
+  
+  /* display: none; -> Faz o conteudo (display), desaparecer */
+  display: none; 
+}
+
+nav .hamb span {
+  /* display: block; -> Ele praticamente se torna uma linha, e faz a quebra */
+  display: block;
+  background-color: #ceb09c;
+  width: 100%;
+  height: 3px;
+
+  /* transition: .3s; -> Tempo que leva para realizar a transição */
+  transition: .3s; 
+
+  /* transition-property -> Forma como irá acontecer a transição nesse caso */
+  transition-property: transform, opacity;
+}
+
+/* nth-child(2) --> Significa que está selecionando o 2º e o 3º span */
+nav .hamb span:nth-child(2) {
+  margin: 7px 0px;
+}
+
+nav .nav-list{
+  /* list-style: none; -> Serve para tirar as bolinhas de trás */
+  list-style: none; 
+}
+
+nav .nav-list li{
+  /* display: inline-block; -> Coloca todos os li, nesse caso, em linha */
+  display: inline-block;
+}
+
+nav .nav-list li a{
+  display: inline-block;
+  color: #eee;
+  margin-left: 55px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* :not(:last-child) -> Não selecionará o ultimo elemento, no caso, que possui a 
+classe btn */
+nav .nav-list li:not(:last-child) a:hover {
+  color: #948c94;
+  transition: .4s;
+}
+
+nav .nav-list li.btn a {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid #ceb09c;
+  padding: 9px 28px;
+  border-radius: 30px;
+  line-height: 1.3;
+  color: #ceb09c;
+  font-weight: 500;
+}
+
+nav .nav-list li.btn a:hover {
+  background-color: #ceb09c;
+  color: white;
+  border: 2px solid transparent;
+  transition: .4s;
+}
+
+.container {
+  padding-top: 190px;
+}
+
+.container .hero-text {
+  margin-bottom: 40px;
+}
+
+.container .hero-text h1{
+  color: white;
+  font-size: 47px;
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 20px 0px 20px;
+}
+span {
+  color: #948c94;
+}
+
+.container .hero-text h3 {
+  color: #eee;
+  font-weight: 400;
+  font-size: 17px;
+}
+
+.container .hero-text p{
+  width: 440px;
+  max-width: 100%;
+  color: #eee;
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.social a{
+  width: 37px;
+  height: 37px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  color: #eee;
+  cursor: pointer;
+  margin-right: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 35px;
+}
+
+.social a:hover {
+  transform: scale(1.1);
+  background-color: #ceb09c;
+  transition: .4s;
+}
+
+.container .hero-text button{
+  color: #eee;
+  background-color: #ceb09c;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 8px 30px;
+  border: 2px solid #ceb09c;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.container .hero-text button:hover {
+  background-color: transparent;
+  border-color: #ceb09c;
+  color: #ceb09c;
+  transition: .4s;
+}
+
+.bottom {
+  margin-top: 243px;
+  padding-bottom: 40px;
+}
+
+.bottom p{
+  color: #eee;
+  letter-spacing: 2px;
+  font-size: 15px ;
+}
