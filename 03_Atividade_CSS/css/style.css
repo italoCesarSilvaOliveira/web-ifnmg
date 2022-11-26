@@ -13,7 +13,6 @@
 body {
   /* overflow-x: hidden; -> Indica se é necessário ter barra de rolagem ou não.
   Além disso, consegue definir o transbordo de ume elemento na página*/
-  overflow: hidden;
 }
 
 .hero {
@@ -57,7 +56,7 @@ nav .hamb {
   height: 24px;
   position: absolute;
   right: 3%;
-  top: 60px;
+  top: 50px;
   z-index: 5;
   cursor: pointer;
 
@@ -202,7 +201,6 @@ span {
 
 .bottom {
   margin-top: 243px;
-  padding-bottom: 40px;
 }
 
 .bottom p {
@@ -291,4 +289,7 @@ span {
   nav .nav-list.open li a:hover{
     color: white;
   }
+
+  
 }
+
