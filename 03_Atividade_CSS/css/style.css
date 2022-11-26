@@ -1,26 +1,27 @@
 * {
   margin: 0;
   padding: 0;
-  
+
   /* box-sizing: border-box; -> Significa que as larguras e alturas pre
   definidas na página não serão mais consideradas, ou seja, todo elemento
   que for colocado (exemplo: div) terá o seu tamanho e configurações originais*/
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   text-decoration: none;
 }
 
 body {
   /* overflow-x: hidden; -> Indica se é necessário ter barra de rolagem ou não.
   Além disso, consegue definir o transbordo de ume elemento na página*/
-  overflow-x: hidden; 
+  overflow: hidden;
 }
 
 .hero {
   width: 100%;
   height: 100%;
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/wallpaper.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/wallpaper.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -38,7 +39,7 @@ header {
   display: flex;
 
   /* flex-wrap: nowrap; -> Todos os itens flexiveis estarão em uma linha */
-  flex-wrap: nowrap; 
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
 }
@@ -51,7 +52,7 @@ header {
 }
 
 nav .hamb {
-  background-color: white;
+  background-color: transparent;
   width: 35px;
   height: 24px;
   position: absolute;
@@ -59,9 +60,9 @@ nav .hamb {
   top: 60px;
   z-index: 5;
   cursor: pointer;
-  
+
   /* display: none; -> Faz o conteudo (display), desaparecer */
-  display: none; 
+  display: none;
 }
 
 nav .hamb span {
@@ -72,7 +73,7 @@ nav .hamb span {
   height: 3px;
 
   /* transition: .3s; -> Tempo que leva para realizar a transição */
-  transition: .3s; 
+  transition: 0.3s;
 
   /* transition-property -> Forma como irá acontecer a transição nesse caso */
   transition-property: transform, opacity;
@@ -83,17 +84,17 @@ nav .hamb span:nth-child(2) {
   margin: 7px 0px;
 }
 
-nav .nav-list{
+nav .nav-list {
   /* list-style: none; -> Serve para tirar as bolinhas de trás */
-  list-style: none; 
+  list-style: none;
 }
 
-nav .nav-list li{
+nav .nav-list li {
   /* display: inline-block; -> Coloca todos os li, nesse caso, em linha */
   display: inline-block;
 }
 
-nav .nav-list li a{
+nav .nav-list li a {
   display: inline-block;
   color: #eee;
   margin-left: 55px;
@@ -105,7 +106,7 @@ nav .nav-list li a{
 classe btn */
 nav .nav-list li:not(:last-child) a:hover {
   color: #948c94;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 nav .nav-list li.btn a {
@@ -123,7 +124,7 @@ nav .nav-list li.btn a:hover {
   background-color: #ceb09c;
   color: white;
   border: 2px solid transparent;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .container {
@@ -134,7 +135,7 @@ nav .nav-list li.btn a:hover {
   margin-bottom: 40px;
 }
 
-.container .hero-text h1{
+.container .hero-text h1 {
   color: white;
   font-size: 47px;
   font-weight: 900;
@@ -151,7 +152,7 @@ span {
   font-size: 17px;
 }
 
-.container .hero-text p{
+.container .hero-text p {
   width: 440px;
   max-width: 100%;
   color: #eee;
@@ -160,7 +161,7 @@ span {
   margin-bottom: 30px;
 }
 
-.social a{
+.social a {
   width: 37px;
   height: 37px;
   display: inline-flex;
@@ -177,10 +178,10 @@ span {
 .social a:hover {
   transform: scale(1.1);
   background-color: #ceb09c;
-  transition: .4s;
+  transition: 0.4s;
 }
 
-.container .hero-text button{
+.container .hero-text button {
   color: #eee;
   background-color: #ceb09c;
   font-size: 16px;
@@ -196,7 +197,7 @@ span {
   background-color: transparent;
   border-color: #ceb09c;
   color: #ceb09c;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .bottom {
@@ -204,8 +205,90 @@ span {
   padding-bottom: 40px;
 }
 
-.bottom p{
+.bottom p {
   color: #eee;
   letter-spacing: 2px;
-  font-size: 15px ;
+  font-size: 15px;
+}
+
+@media screen and (max-height: 900px){
+  body {
+    overflow: visible;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  nav .hamb {
+    display: initial;
+  }
+  .click {
+    top: 46px;
+  }
+  .click span {
+    position: absolute;
+    margin-top: 10px;
+  }
+  .click span:first-child {
+    transform: rotate(-40deg);
+    transition: .1s;
+  }
+  .click span:nth-child(2) {
+    opacity: 0;
+    margin: 0;
+    transition: .1s;
+  }
+  .click span:last-child {
+    transform: rotate(40deg);
+    top: 0;
+    transition: .1s;
+  }
+  nav .nav-list {
+    position: absolute;
+    top: 90px;
+    right: -65%;
+    bottom: 0;
+    width: 60%;
+    height: 50%;
+    background: black;
+    z-index: 2;
+    padding: 6% 9%;
+    transition: 0.3s right;
+    border-radius: 10px;
+  }
+  nav .nav-list li {
+    display: block;
+  }
+  nav .nav-list li a:hover{
+    background-color: #ceb09c;
+    transition: .4s;
+  }
+  nav .nav-list li a {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 0;
+    margin-bottom: 40px;
+    border: 1px solid #ceb09c;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  nav .nav-list li a:hover{
+    border: 1px solid #ceb09c;
+    border-radius: 5px;
+  }
+  nav .nav-list li.btn a {
+    position: absolute;
+    bottom: 0%;
+    right: 20%;
+    left: 20%;
+    padding: 7px 15px;
+    font-size: 14px;
+  }
+  nav .nav-list.open {
+    right: 0;
+  }
+  nav .nav-list.open li a:hover{
+    color: white;
+  }
 }
