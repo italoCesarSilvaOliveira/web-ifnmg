@@ -354,11 +354,6 @@ span {
     color: white;
   }
 
-  .footer {
-    text-align: center;
-    padding-bottom: 30px;
-  }
-
   .container {
     text-align: center;
   }
@@ -369,7 +364,13 @@ span {
 
   .footer {
     flex-direction: column;
-    gap: 10px;
+    gap: 30px;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  .footer .bottom h3 {
+    display: none;
   }
 }
 
