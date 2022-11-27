@@ -13,6 +13,14 @@
 body {
   /* overflow-x: hidden; -> Indica se é necessário ter barra de rolagem ou não.
   Além disso, consegue definir o transbordo de ume elemento na página*/
+  overflow-x: hidden;
+}
+
+.main-width {
+  width: 1280px;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .hero {
@@ -24,13 +32,6 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
-}
-
-.main-width {
-  width: 1280px;
-  max-width: 95%;
-  margin: 0 auto;
-  padding: 0 20px;
 }
 
 header {
@@ -139,7 +140,7 @@ nav .nav-list li.btn a:hover {
   font-size: 47px;
   font-weight: 900;
   line-height: 1.2;
-  margin: 20px 0px 20px;
+  margin: 8px 0px 30px;
 }
 span {
   color: #948c94;
@@ -152,7 +153,7 @@ span {
 }
 
 .container .hero-text p {
-  width: 440px;
+  width: 500px;
   max-width: 100%;
   color: #eee;
   font-size: 15px;
@@ -160,13 +161,17 @@ span {
   margin-bottom: 30px;
 }
 
+.social {
+  margin-top: 66px;
+}
+
 .social a {
-  width: 37px;
-  height: 37px;
+  width: 50px;
+  height: 50px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: 17px;
+  font-size: 24px;
   color: #eee;
   cursor: pointer;
   margin-right: 20px;
@@ -199,17 +204,66 @@ span {
   transition: 0.4s;
 }
 
-.bottom {
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   margin-top: 243px;
 }
 
-.bottom p {
+.footer p {
   color: #eee;
   letter-spacing: 2px;
   font-size: 15px;
 }
 
-@media screen and (max-height: 900px){
+.footer .bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.footer .bottom h3 {
+  color: white;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.footer .list-bottom {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.footer .list-bottom li{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  font-size: 27px;
+  cursor: pointer;
+}
+
+.footer .list-bottom li a:hover{
+  font-size: 30px;
+  transition: .2s;
+}
+
+.footer .list-bottom li a i{
+  color: #eee;
+}
+
+.footer .list-bottom li a i:hover{
+  color: #ceb09c;
+  transition: .2s;
+}
+
+@media screen and (max-height: 900px) {
   body {
     overflow: visible;
   }
@@ -228,37 +282,39 @@ span {
   }
   .click span:first-child {
     transform: rotate(-40deg);
-    transition: .1s;
+    transition: 0.1s;
   }
   .click span:nth-child(2) {
     opacity: 0;
     margin: 0;
-    transition: .1s;
+    transition: 0.1s;
   }
   .click span:last-child {
     transform: rotate(40deg);
     top: 0;
-    transition: .1s;
+    transition: 0.1s;
   }
   nav .nav-list {
+    display: block;
     position: absolute;
     top: 90px;
-    right: -65%;
+    right: 0;
     bottom: 0;
     width: 60%;
     height: 50%;
     background: black;
-    z-index: 2;
+    z-index: -1;
     padding: 6% 9%;
     transition: 0.3s right;
     border-radius: 10px;
+    opacity: 0;
   }
   nav .nav-list li {
     display: block;
   }
-  nav .nav-list li a:hover{
+  nav .nav-list li a:hover {
     background-color: #ceb09c;
-    transition: .4s;
+    transition: 0.4s;
   }
   nav .nav-list li a {
     display: block;
@@ -271,7 +327,7 @@ span {
     border-radius: 5px;
     padding: 10px;
   }
-  nav .nav-list li a:hover{
+  nav .nav-list li a:hover {
     border: 1px solid #ceb09c;
     border-radius: 5px;
   }
@@ -284,12 +340,59 @@ span {
     font-size: 14px;
   }
   nav .nav-list.open {
-    right: 0;
+    display: block;
+    opacity: 0;
+    animation: appear 0.5s forwards;
+    z-index: 1;
   }
-  nav .nav-list.open li a:hover{
+
+  nav .nav-list {
+    animation: desappear 0.5s forwards;
+  }
+
+  nav .nav-list.open li a:hover {
     color: white;
   }
 
-  
+  .footer {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  .container .hero-text p {
+    width: auto;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
+@keyframes appear {
+  0% {
+    opacity: 0;
+    z-index: -1;
+  }
+
+  100% {
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+@keyframes desappear {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
