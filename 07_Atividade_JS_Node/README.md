@@ -5,11 +5,11 @@
 </p>
 
 <p align="center">
-  <a href="#-"> Descrição </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-"> Instalação </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-"> Regras do Jogo </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-"> Como Jogar </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-"> Créditos </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-descrição"> Descrição </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-instalação"> Instalação </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-regras-do-jogo"> Regras do Jogo </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-como-jogar"> Como Jogar </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-créditos"> Créditos </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-memo-licença"> Licença </a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </p>
 
@@ -32,6 +32,9 @@
 
   #### Quais foram alguns dos desafios encontrados?
   <p>As dificuldades encontradas para o desenvolvimento desse jogo, foi no seu grande tempo, a lógica para criar as funções e representar o jogo atráves do programa. O intuito da criação desse programa foi a prática para desenvolver a lógica de programação, além de conseguir utilizar uma tecnologia nova para realizar essa prática.</p> 
+
+## Instalação
+<p>Para poder executar o jogo, é necessário fazer a instalação do Node.js e do npm. As dependências e os recursos já estão inseridos no programa.</p>
 
 ## Regras do Jogo
 
